@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<!--
+	Road Trip by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>vip.promotio.nz</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plax.js"></script>
+    <style type="text/css">
+	div#container {
+		overflow: hidden;
+	}
+    div#shell {
+        display: block;
+        position: relative;
+        margin: 150px auto;
+        width: 318px;
+        height: 100vh;
+        z-index: 1;
+    }
+	@keyframes spin-horizontal {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+	}
+    img#proceed {
+	position: absolute;
+	top: 570px;
+	left: 8px;
+	z-index: 15;
+    }    
+	img#circle {
+	position: absolute;
+	top: -116px;
+	left: -116px;
+	z-index: 12;
+    -webkit-animation:spin-horizontal 13s linear infinite;
+    -moz-animation:spin-horizontal 13s linear infinite;
+    animation:spin-horizontal 13s linear infinite;
+    }       
+	img#circle1 {
+	position: absolute;
+	top: -116px;
+	left: -116px;
+	z-index: 12;
+    -webkit-animation:spin-horizontal 11s linear infinite;
+    -moz-animation:spin-horizontal 11s linear infinite;
+    animation:spin-horizontal 11s linear infinite;
+    }
+		img#circle2 {
+	position: absolute;
+	top: -116px;
+	left: -116px;
+	z-index: 12;
+    -webkit-animation:spin-horizontal 7s linear infinite;
+    -moz-animation:spin-horizontal 7s linear infinite;
+            animation:spin-horizontal 7s linear infinite;}
+        
+    img#circle_num {
+	position: absolute;
+	top: -124px;
+	left: -116px;
+	z-index: 23;}
+            
+    img#circle_fib {
+	position: absolute;
+        top: -115px;
+        left: -277px;
+	z-index: 23;}
+        
+    img#circleX {
+	position: absolute;
+	top: -116px;
+	left: -116px;
+	z-index: 12;
+    -webkit-animation:spin-horizontal 23s linear infinite;
+    -moz-animation:spin-horizontal 23s linear infinite;
+    animation:spin-horizontal 23s linear infinite;
+    }       
+	img#circle1X {
+	position: absolute;
+	top: -116px;
+	left: -116px;
+	z-index: 12;
+    -webkit-animation:spin-horizontal 19s linear infinite;
+    -moz-animation:spin-horizontal 19s linear infinite;
+    animation:spin-horizontal 19s linear infinite;
+    }
+            img#circle2X {
+	position: absolute;
+	top: -116px;
+	left: -116px;
+	z-index: 12;
+    -webkit-animation:spin-horizontal 17s linear infinite;
+    -moz-animation:spin-horizontal 17s linear infinite;
+    animation:spin-horizontal 17s linear infinite;
+    } 	
+        img#circle4 {
+	position: absolute;
+	top: -116px;
+	left: -116px;
+	z-index: 12;
+    -webkit-animation:spin-horizontal 5s linear infinite;
+    -moz-animation:spin-horizontal 5s linear infinite;
+    animation:spin-horizontal 5s linear infinite;
+    }       
+	img#circle5 {
+	position: absolute;
+	top: -116px;
+	left: -116px;
+	z-index: 12;
+    -webkit-animation:spin-horizontal 3s linear infinite;
+    -moz-animation:spin-horizontal 3s linear infinite;
+    animation:spin-horizontal 3s linear infinite;
+    }
+	img#circle6 {
+	position: absolute;
+	top: -116px;
+	left: -116px;
+	z-index: 12;
+    -webkit-animation:spin-horizontal 2s linear infinite;
+    -moz-animation:spin-horizontal 2s linear infinite;
+    animation:spin-horizontal 2s linear infinite;
+    }         
+    img#spiral1 {
+	position: absolute;
+	top: -116px;
+	left: -116px;
+	z-index: 9;
+    -webkit-animation:spin 19s linear infinite;
+    -moz-animation:spin 19s linear infinite;
+    animation:spin 19s linear infinite;
+    }       
+	img#spiral2 {
+	position: absolute;
+	top: -91px;
+	left: -91px;
+	z-index: 8;
+    -webkit-animation:spin 16s linear infinite;
+    -moz-animation:spin 16s linear infinite;
+    animation:spin 16s linear infinite;
+    }           
+	img#spiral3 {
+	position: absolute;
+	top: -66px;
+	left: -66px;
+	z-index: 7;
+    -webkit-animation:spin 13s linear infinite;
+    -moz-animation:spin 13s linear infinite;
+    animation:spin 13s linear infinite;
+    }       
+	img#fav {
+	position: absolute;
+	top: 88px;
+	left: 134px;
+	z-index: 15;
+    }   
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+	  	      
+    </style>
+          
+<script type="text/javascript">
+	var $el = $("#very-specific-design");
+    var elHeight = $el.outerHeight();
+    var elWidth = $el.outerWidth();
+    
+    var $wrapper = $("#scaleable-wrapper");
+    
+    $wrapper.resizable({
+      resize: doResize
+    });
+    
+    function doResize(event, ui) {
+      
+      var scale, origin;
+        
+      scale = Math.min(
+        ui.size.width / elWidth,    
+        ui.size.height / elHeight
+      );
+      
+      $el.css({
+        transform: "translate(-50%, -50%) " + "scale(" + scale + ")"
+      });
+      
+    }
+    
+    var starterData = { 
+      size: {
+        width: $wrapper.width(),
+        height: $wrapper.height()
+      }
+    }
+    doResize(null, starterData);
+	</script>
+  	<script type="text/javascript">
+			$(document).ready(function () {
+			var Status = 'winning'
+			setEpic()
+			$.plax.enable()
+			function setEpic(){
+          	$('#fav').plaxify({"xRange":100,"yRange":100})
+          	$('#proceed').plaxify({"xRange":200,"yRange":50})
+          	Status = 'winning'
+        }
+      })
+    </script>  <meta charset="utf-8">
+  </head>
+  <body>
+<div id=container>
+  <div id="shell">
+  <img src="l1.png" name="spiral1" width="550" height="550" id="circle4">
+  <img src="l1.png" name="spiral2" width="550" height="550" id="circle5">
+  <img src="l1.png" name="spiral3" width="550" height="550" id="circle6">
+  <img src="circle1.png" name="circle" width="550" height="550" id="circle">
+  <img src="circle1.png" name="circle1" width="550" height="550" id="circle1">
+  <img src="circle1.png" name="circle2" width="550" height="550" id="circle2"> 
+  <img src="circle2.png" name="circle" width="550" height="550" id="circleX">
+  <img src="circle2.png" name="circle1" width="550" height="550" id="circle1X">
+  <img src="circle2.png" name="circle2" width="550" height="550" id="circle2X">
+  <img src="circle_num.png" name="circle_num" width="550" height="550" id="circle_num">
+  <img src="fibb.png" name="circle_fib" height="550" id="circle_fib">
+  <img src="fgl.png" name="circle_fib" width="100%" id="proceed">
+
+  </div>
+  
+  </div>
+
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">VIP <span>PROMOTIO.NZ</span></a></div>
+				<a href="#menu"><span>Menu</span></a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="#banner">Home</a></li>
+					<li><a href="#one">About</a></li>
+					<li><a href="#footer">Contact</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+		<!--
+			Note: To show a background image, set the "data-bg" attribute below
+			to the full filename of your image. This is used in each section to set
+			the background image.
+		-->
+			<section id="banner" class="bg-img" data-bg="banner.jpg">
+				<div class="inner">
+					<header>
+  					<h2>Design Consulting</h2>
+                    </header>
+                    </div>
+				<a href="#one" class="more">Learn More</a>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper post bg-img" data-bg="banner2.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Experienced Professionals</h2>
+							<p>We stick to the core plan and execute flawlessly.</p>
+						</header>
+						<div class="content">							
+                        <p>Talented hard working and dedicated, we add value.</p>
+						</div>
+					</article>
+				</div>
+				<a href="#three" class="more">Learn More</a>
+			</section>
+		<!-- Three -->
+			<section id="three" class="wrapper post bg-img" data-bg="banner4.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Certified and Educated</h2>
+							<p>Wellington School of Creative Industries</p>
+						</header>
+						<div class="content">
+							<p>Bachelor in Digital Media</p>
+							<p>Certificate in Creative Technologies</p><br>
+							<p>Certificate in Design</p><br>
+							<p>Outstanding Leadership Award</p><br>
+							<p>MaiBiz Entrepreneurial Award</p><br>
+						</div>
+					</article>
+				</div>
+				<a href="#four" class="more">Learn More</a>
+			</section>
+
+		<!-- Four -->
+			<section id="four" class="wrapper post bg-img" data-bg="banner3.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Intuitive techniques</h2>
+							<p>We only suggest functional solutions</p>
+						</header>
+						<div class="content">
+							<p>We keep up to date on the latest tools that are available at our discretion.</p>
+						</div>
+					</article>
+				</div>
+                    <a href="#footer" class="more">Learn More</a>
+
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+					<h2>How can we help?</h2>
+
+					<form action="mailto:vip@promotio.nz" method="post">
+
+						<div class="field half first">
+							<label for="name">Name</label>
+							<input name="name" id="name" type="text" placeholder="Name">
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<div class="field">
+							<label for="message">Project Scope</label>
+							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+						</div>
+						<ul class="actions">
+							<li><input value="Send Message" class="button alt" type="submit"></li>
+						</ul>
+					</form>
+
+					<ul class="icons">
+						<li><a href="https://twitter.com/vip_promotionz" class="icon round fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.facebook.com/vippromotionz" class="icon round fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/vippromotionz/" class="icon round fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+
+					<div class="copyright">
+						&copy; 2017 Amuzed Limited - Design: <a href="vip.promotio.nz">vip.promotio.nz</a>
+					</div>
+
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
